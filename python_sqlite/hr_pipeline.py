@@ -6,9 +6,11 @@ CSV cleaning + validation + SQLite loader.
 Important:
 - Demo decision-support project, not legal advice.
 - Update the configured sector wage floor and tax logic before operational use.
+- Cleaned CSV exports neutralize spreadsheet-formula prefixes to reduce CSV injection risk.
 """
 from pathlib import Path
 import sqlite3
+
 import pandas as pd
 
 BASE = Path(__file__).resolve().parents[1]
@@ -35,51 +37,94 @@ DATE_FIELDS = {
     "compliance_register": ["Month", "Action_Due_Date"],
 }
 
-def clean_text(series):
+SPREADSHEET_FORMULA_PREFIXES = ("=", "+", "-", "@")
+
+
+def clean_text(series: pd.Series) -> pd.Series:
+    """Trim text and normalize blank-like values."""
     return series.astype("string").str.strip().replace({"": pd.NA, "nan": pd.NA})
 
-def load_and_clean(table, filename):
-    df = pd.read_csv(DATA / filename)
-    df.columns = [c.strip().replace(" ", "_") for c in df.columns]
-    for col in df.select_dtypes(include="object").columns:
-        df[col] = clean_text(df[col])
-    for col in DATE_FIELDS.get(table, []):
-        if col in df.columns:
-            df[col] = pd.to_datetime(df[col], errors="coerce").dt.date
-    df = df.drop_duplicates()
-    return df
 
-def validate(frames):
-    issues = []
-    emp = frames["employees"]
-    pay = frames["payroll_monthly"]
-    att = frames["attendance_leave_monthly"]
+def neutralize_spreadsheet_formulas(value):
+    """Prefix formula-like text so Excel/Sheets treats it as literal text.
 
-    if emp["Employee_ID"].duplicated().any():
+    This is applied only to cleaned CSV exports. SQLite retains the cleaned value
+    without the protective apostrophe so analytical queries are unaffected.
+    """
+    if pd.isna(value) or not isinstance(value, str):
+        return value
+    stripped = value.lstrip()
+    if stripped.startswith(SPREADSHEET_FORMULA_PREFIXES):
+        return "'" + value
+    return value
+
+
+def spreadsheet_safe_copy(df: pd.DataFrame) -> pd.DataFrame:
+    """Return a copy suitable for opening as CSV in spreadsheet software."""
+    safe = df.copy()
+    for column in safe.select_dtypes(include=["object", "string"]).columns:
+        safe[column] = safe[column].map(neutralize_spreadsheet_formulas)
+    return safe
+
+
+def load_and_clean(table: str, filename: str) -> pd.DataFrame:
+    """Load a configured local CSV and apply deterministic cleaning."""
+    if table not in FILES or FILES[table] != filename:
+        raise ValueError(f"Unapproved table or filename: {table!r}, {filename!r}")
+
+    source = (DATA / filename).resolve()
+    if source.parent != DATA.resolve():
+        raise ValueError(f"Source path escapes the data directory: {source}")
+
+    df = pd.read_csv(source)
+    df.columns = [column.strip().replace(" ", "_") for column in df.columns]
+    for column in df.select_dtypes(include="object").columns:
+        df[column] = clean_text(df[column])
+    for column in DATE_FIELDS.get(table, []):
+        if column in df.columns:
+            df[column] = pd.to_datetime(df[column], errors="coerce").dt.date
+    return df.drop_duplicates()
+
+
+def validate(frames: dict[str, pd.DataFrame]) -> list[str]:
+    """Run referential-integrity and basic payroll-quality checks."""
+    issues: list[str] = []
+    employee = frames["employees"]
+    payroll = frames["payroll_monthly"]
+    attendance = frames["attendance_leave_monthly"]
+
+    if employee["Employee_ID"].duplicated().any():
         issues.append("Duplicate Employee_ID found.")
-    missing_emp = set(pay["Employee_ID"].dropna()) - set(emp["Employee_ID"].dropna())
-    if missing_emp:
-        issues.append(f"Payroll has {len(missing_emp)} unknown Employee_ID values.")
-    missing_att = set(att["Employee_ID"].dropna()) - set(emp["Employee_ID"].dropna())
-    if missing_att:
-        issues.append(f"Attendance has {len(missing_att)} unknown Employee_ID values.")
-    if "Gross_Pay" in pay and (pd.to_numeric(pay["Gross_Pay"], errors="coerce") < 0).any():
+
+    missing_payroll_employees = set(payroll["Employee_ID"].dropna()) - set(employee["Employee_ID"].dropna())
+    if missing_payroll_employees:
+        issues.append(f"Payroll has {len(missing_payroll_employees)} unknown Employee_ID values.")
+
+    missing_attendance_employees = set(attendance["Employee_ID"].dropna()) - set(employee["Employee_ID"].dropna())
+    if missing_attendance_employees:
+        issues.append(f"Attendance has {len(missing_attendance_employees)} unknown Employee_ID values.")
+
+    if "Gross_Pay" in payroll and (pd.to_numeric(payroll["Gross_Pay"], errors="coerce") < 0).any():
         issues.append("Negative Gross_Pay found.")
+
     return issues
 
-def main():
+
+def main() -> None:
     frames = {table: load_and_clean(table, filename) for table, filename in FILES.items()}
     issues = validate(frames)
 
-    with sqlite3.connect(DB) as con:
-        for table, df in frames.items():
-            df.to_sql(table, con, if_exists="replace", index=False)
-            df.to_csv(CLEAN / f"{table}_cleaned.csv", index=False, encoding="utf-8-sig")
+    with sqlite3.connect(DB) as connection:
+        for table, dataframe in frames.items():
+            dataframe.to_sql(table, connection, if_exists="replace", index=False)
+            safe_export = spreadsheet_safe_copy(dataframe)
+            safe_export.to_csv(CLEAN / f"{table}_cleaned.csv", index=False, encoding="utf-8-sig")
 
     print("Loaded tables:", ", ".join(frames))
     print("Validation issues:", issues if issues else "None")
     print("SQLite:", DB)
-    print("Cleaned CSV folder:", CLEAN)
+    print("Spreadsheet-safe cleaned CSV folder:", CLEAN)
+
 
 if __name__ == "__main__":
     main()
