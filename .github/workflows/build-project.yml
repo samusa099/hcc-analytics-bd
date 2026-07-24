@@ -1,0 +1,82 @@
+name: Validate HCC Analytics BD Build
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "scripts/build_project.py"
+      - ".github/workflows/build-project.yml"
+      - "data/**"
+      - "excel/**"
+      - "bi/**"
+      - "python_sqlite/**"
+      - "guide/**"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build_project.py"
+      - ".github/workflows/build-project.yml"
+      - "data/**"
+      - "excel/**"
+      - "bi/**"
+      - "python_sqlite/**"
+      - "guide/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hcc-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-build.txt
+
+      - name: Install pinned build dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-build.txt
+
+      - name: Generate project files
+        run: python scripts/build_project.py
+
+      - name: Validate generated outputs
+        run: |
+          test -f excel/Bangladesh_HR_Compensation_Compliance_Dashboards.xlsx
+          test -f data/employees.csv
+          test -f data/payroll_monthly.csv
+          test -f data/compliance_register.csv
+          test -f python_sqlite/hr_analytics.sqlite
+          test -f guide/How_to_Use_HCC_Analytics_BD.webp
+          python - <<'PY'
+          import csv
+          import sqlite3
+          from pathlib import Path
+
+          with open('data/employees.csv', encoding='utf-8-sig') as file:
+              assert sum(1 for _ in csv.DictReader(file)) == 120
+          with sqlite3.connect('python_sqlite/hr_analytics.sqlite') as connection:
+              assert connection.execute('select count(*) from employees').fetchone()[0] == 120
+          assert Path('excel/Bangladesh_HR_Compensation_Compliance_Dashboards.xlsx').stat().st_size > 10_000
+          print('Generated outputs validated.')
+          PY
+
+      - name: Confirm reproducible generated files
+        run: |
+          if ! git diff --quiet -- README.md DATASET_USAGE_GUIDE.md .gitignore metadata.json data excel bi python_sqlite guide; then
+            echo "Generated outputs differ from the committed files. Run scripts/build_project.py locally and commit the results."
+            git diff --stat
+            exit 1
+          fi
