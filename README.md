@@ -40,6 +40,8 @@ A ready-to-use **synthetic HR analytics dataset and dashboard pack** for Banglad
 - **[Complete Dataset Usage Guide](DATASET_USAGE_GUIDE.md)** — calculations, use cases and platform workflows
 - **[Power BI Upload Guide](powerbi/README.md)** — PBIX location, large-file method and security checklist
 - **[v1.2.0 Release Notes](RELEASE_NOTES.md)** — Power BI upload readiness and security changes
+- **[Contributing Guide](CONTRIBUTING.md)** — contribution process and synthetic-data policy
+- **[Code of Conduct](CODE_OF_CONDUCT.md)** — expected standards for project participation
 - **[Security Policy](SECURITY.md)** — responsible disclosure and data-protection rules
 - **[Security Review & Closure](docs/SECURITY_REVIEW_2026-07-24.md)** — findings, remediation and residual controls
 
@@ -65,6 +67,11 @@ scripts/        Reproducible project generator
 - CODEOWNERS covers workflows, scripts, data tooling and binary analytics assets.
 
 Branch protection and secret-scanning settings should also be enabled from the repository's GitHub settings.
+
+## ⚖️ Licences
+
+- **Dataset and documentation:** Creative Commons Attribution 4.0 — see [`LICENSE`](LICENSE)
+- **Python, SQL and supporting code:** MIT — see [`LICENSE-CODE`](LICENSE-CODE)
 
 ## ⚠️ Important
 
