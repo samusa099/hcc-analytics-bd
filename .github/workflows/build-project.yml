@@ -37,7 +37,7 @@ jobs:
           test -f data/data_dictionary.csv
           test -f python_sqlite/hr_analytics.sqlite
           test -f python_sqlite/hr_pipeline.py
-          test -f guide/How_to_Use_HCC_Analytics_BD.webp
+          test -f guide/How_to_Use_Bangladesh_HR_Analytics_Pack.png
           test -f powerbi/README.md
           python - <<'PY'
           import csv
