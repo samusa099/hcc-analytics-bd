@@ -1,0 +1,14 @@
+# Default ownership
+* @samusa099
+
+# Security-sensitive automation and policy
+/.github/ @samusa099
+/scripts/ @samusa099
+/python_sqlite/ @samusa099
+/requirements-build.txt @samusa099
+/SECURITY.md @samusa099
+
+# Binary analytics assets and release documentation
+/excel/ @samusa099
+/powerbi/ @samusa099
+/RELEASE_NOTES.md @samusa099
