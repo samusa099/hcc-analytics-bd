@@ -1,0 +1,121 @@
+﻿Employee_ID,Department,Casual_Entitlement_Annual,Casual_Used_YTD,Sick_Entitlement_Annual,Sick_Used_YTD,Earned_Leave_Entitlement_Demo,Earned_Leave_Used_YTD,Festival_Holiday_Entitlement,Festival_Holidays_Worked_YTD,Maternity_Entitlement_Days,Leave_Record_Compliance
+EMP0001,Quality Assurance,10,1,14,0,14,0,13,1,120,Compliant
+EMP0002,Maintenance,10,3,14,0,14,2,13,0,120,Compliant
+EMP0003,Production,10,2,14,1,14,1,13,0,120,Compliant
+EMP0004,Supply Chain,10,6,14,1,14,0,13,0,120,Compliant
+EMP0005,Human Resources,10,1,14,1,14,0,13,1,120,Compliant
+EMP0006,Production,10,0,14,3,14,3,13,0,120,Compliant
+EMP0007,Production,10,1,14,2,14,4,13,1,120,Compliant
+EMP0008,Sales & Marketing,10,3,14,2,14,5,13,0,120,Compliant
+EMP0009,Information Technology,10,4,14,0,14,1,13,1,120,Compliant
+EMP0010,Sales & Marketing,10,6,14,2,14,7,13,0,120,Compliant
+EMP0011,Human Resources,10,1,14,0,14,2,13,0,120,Compliant
+EMP0012,Quality Assurance,10,1,14,2,14,0,13,1,120,Compliant
+EMP0013,Maintenance,10,3,14,1,14,1,13,0,120,Compliant
+EMP0014,Maintenance,10,0,14,1,14,1,13,0,120,Compliant
+EMP0015,Maintenance,10,1,14,1,14,2,13,1,120,Compliant
+EMP0016,Finance & Accounts,10,2,14,3,14,2,13,0,120,Compliant
+EMP0017,Production,10,4,14,0,14,5,13,0,120,Compliant
+EMP0018,Administration,10,3,14,2,14,4,13,0,120,Compliant
+EMP0019,Maintenance,10,2,14,1,14,5,13,0,120,Compliant
+EMP0020,Sales & Marketing,10,2,14,0,14,2,13,0,120,Compliant
+EMP0021,Quality Assurance,10,0,14,1,14,3,13,0,120,Compliant
+EMP0022,Sales & Marketing,10,2,14,1,14,2,13,0,120,Compliant
+EMP0023,Quality Assurance,10,2,14,2,14,1,13,0,120,Compliant
+EMP0024,Supply Chain,10,1,14,0,14,0,13,1,120,Compliant
+EMP0025,Supply Chain,10,1,14,1,14,0,13,0,120,Compliant
+EMP0026,Administration,10,1,14,0,14,1,13,0,120,Compliant
+EMP0027,Production,10,4,14,1,14,0,13,0,120,Compliant
+EMP0028,Production,10,0,14,1,14,1,13,0,120,Compliant
+EMP0029,Information Technology,10,3,14,1,14,0,13,1,120,Compliant
+EMP0030,Information Technology,10,1,14,0,14,0,13,0,120,Compliant
+EMP0031,Administration,10,2,14,1,14,3,13,0,120,Compliant
+EMP0032,Production,10,1,14,1,14,3,13,1,120,Compliant
+EMP0033,Sales & Marketing,10,3,14,2,14,2,13,0,120,Compliant
+EMP0034,Production,10,2,14,1,14,3,13,1,120,Compliant
+EMP0035,Production,10,4,14,0,14,7,13,0,120,Compliant
+EMP0036,Administration,10,0,14,1,14,4,13,1,120,Compliant
+EMP0037,Production,10,5,14,2,14,1,13,0,120,Compliant
+EMP0038,Human Resources,10,3,14,2,14,2,13,0,120,Compliant
+EMP0039,Administration,10,0,14,1,14,1,13,0,120,Compliant
+EMP0040,Sales & Marketing,10,3,14,2,14,3,13,1,120,Compliant
+EMP0041,Human Resources,10,1,14,4,14,2,13,0,120,Compliant
+EMP0042,Information Technology,10,2,14,2,14,2,13,0,120,Compliant
+EMP0043,Sales & Marketing,10,2,14,0,14,0,13,1,120,Compliant
+EMP0044,Sales & Marketing,10,2,14,3,14,1,13,0,120,Compliant
+EMP0045,Production,10,2,14,2,14,5,13,0,120,Compliant
+EMP0046,Production,10,1,14,2,14,3,13,0,120,Compliant
+EMP0047,Quality Assurance,10,2,14,0,14,3,13,0,120,Compliant
+EMP0048,Finance & Accounts,10,2,14,1,14,2,13,0,120,Compliant
+EMP0049,Supply Chain,10,1,14,1,14,2,13,0,120,Compliant
+EMP0050,Production,10,1,14,2,14,0,13,0,120,Compliant
+EMP0051,Sales & Marketing,10,2,14,4,14,3,13,1,120,Compliant
+EMP0052,Information Technology,10,1,14,1,14,4,13,0,120,Compliant
+EMP0053,Production,10,4,14,2,14,3,13,1,120,Compliant
+EMP0054,Administration,10,3,14,3,14,2,13,0,120,Compliant
+EMP0055,Human Resources,10,0,14,2,14,0,13,2,120,Compliant
+EMP0056,Finance & Accounts,10,3,14,0,14,1,13,0,120,Compliant
+EMP0057,Administration,10,0,14,1,14,1,13,0,120,Compliant
+EMP0058,Supply Chain,10,4,14,1,14,0,13,0,120,Compliant
+EMP0059,Production,10,1,14,1,14,1,13,0,120,Compliant
+EMP0060,Production,10,0,14,1,14,4,13,0,120,Compliant
+EMP0061,Production,10,4,14,3,14,3,13,1,120,Compliant
+EMP0062,Human Resources,10,1,14,0,14,2,13,0,120,Compliant
+EMP0063,Supply Chain,10,3,14,0,14,1,13,1,120,Compliant
+EMP0064,Maintenance,10,5,14,1,14,1,13,2,120,Compliant
+EMP0065,Maintenance,10,3,14,1,14,4,13,1,120,Compliant
+EMP0066,Finance & Accounts,10,4,14,2,14,4,13,0,120,Compliant
+EMP0067,Administration,10,3,14,0,14,2,13,0,120,Compliant
+EMP0068,Information Technology,10,1,14,2,14,2,13,0,120,Compliant
+EMP0069,Quality Assurance,10,2,14,3,14,1,13,0,120,Compliant
+EMP0070,Production,10,1,14,0,14,2,13,0,120,Compliant
+EMP0071,Production,10,2,14,4,14,2,13,0,120,Compliant
+EMP0072,Information Technology,10,3,14,4,14,0,13,1,120,Compliant
+EMP0073,Quality Assurance,10,2,14,0,14,2,13,0,120,Compliant
+EMP0074,Production,10,2,14,3,14,5,13,0,120,Compliant
+EMP0075,Information Technology,10,2,14,1,14,1,13,0,120,Compliant
+EMP0076,Production,10,0,14,1,14,4,13,0,120,Compliant
+EMP0077,Supply Chain,10,2,14,1,14,6,13,0,120,Compliant
+EMP0078,Finance & Accounts,10,0,14,0,14,0,13,0,120,Compliant
+EMP0079,Maintenance,10,1,14,2,14,2,13,0,120,Compliant
+EMP0080,Supply Chain,10,1,14,1,14,1,13,0,120,Compliant
+EMP0081,Finance & Accounts,10,2,14,2,14,4,13,0,120,Compliant
+EMP0082,Sales & Marketing,10,3,14,0,14,2,13,0,120,Compliant
+EMP0083,Information Technology,10,1,14,4,14,2,13,0,120,Compliant
+EMP0084,Human Resources,10,1,14,3,14,0,13,0,120,Compliant
+EMP0085,Supply Chain,10,4,14,4,14,1,13,0,120,Compliant
+EMP0086,Quality Assurance,10,4,14,0,14,0,13,1,120,Compliant
+EMP0087,Sales & Marketing,10,2,14,4,14,1,13,0,120,Compliant
+EMP0088,Human Resources,10,4,14,1,14,2,13,1,120,Compliant
+EMP0089,Finance & Accounts,10,2,14,4,14,0,13,1,120,Compliant
+EMP0090,Production,10,2,14,2,14,0,13,0,120,Compliant
+EMP0091,Quality Assurance,10,2,14,1,14,3,13,2,120,Compliant
+EMP0092,Quality Assurance,10,6,14,0,14,2,13,0,120,Compliant
+EMP0093,Finance & Accounts,10,1,14,1,14,3,13,0,120,Compliant
+EMP0094,Human Resources,10,2,14,1,14,3,13,0,120,Compliant
+EMP0095,Production,10,3,14,4,14,0,13,0,120,Compliant
+EMP0096,Administration,10,3,14,0,14,4,13,1,120,Compliant
+EMP0097,Finance & Accounts,10,1,14,0,14,0,13,0,120,Compliant
+EMP0098,Quality Assurance,10,3,14,2,14,1,13,0,120,Compliant
+EMP0099,Information Technology,10,0,14,2,14,4,13,0,120,Compliant
+EMP0100,Information Technology,10,0,14,3,14,0,13,0,120,Compliant
+EMP0101,Administration,10,1,14,4,14,0,13,1,120,Compliant
+EMP0102,Finance & Accounts,10,0,14,3,14,0,13,0,120,Compliant
+EMP0103,Administration,10,1,14,2,14,3,13,1,120,Compliant
+EMP0104,Information Technology,10,0,14,1,14,3,13,0,120,Compliant
+EMP0105,Administration,10,2,14,3,14,2,13,0,120,Compliant
+EMP0106,Human Resources,10,3,14,5,14,0,13,1,120,Compliant
+EMP0107,Supply Chain,10,0,14,1,14,3,13,0,120,Compliant
+EMP0108,Production,10,0,14,2,14,4,13,0,120,Compliant
+EMP0109,Quality Assurance,10,2,14,2,14,4,13,1,120,Compliant
+EMP0110,Sales & Marketing,10,0,14,2,14,0,13,0,120,Compliant
+EMP0111,Human Resources,10,0,14,1,14,4,13,1,120,Compliant
+EMP0112,Production,10,4,14,3,14,1,13,0,120,Compliant
+EMP0113,Maintenance,10,2,14,3,10,1,13,0,120,Compliant
+EMP0114,Finance & Accounts,10,1,14,0,10,0,13,0,120,Compliant
+EMP0115,Production,10,0,14,1,10,0,13,0,120,Compliant
+EMP0116,Production,10,3,14,0,10,1,13,0,120,Compliant
+EMP0117,Supply Chain,10,0,14,0,10,0,13,0,120,Compliant
+EMP0118,Supply Chain,10,1,14,0,10,0,13,0,120,Compliant
+EMP0119,Human Resources,10,1,14,0,10,2,13,0,120,Compliant
+EMP0120,Production,10,2,14,3,10,0,13,0,120,Compliant

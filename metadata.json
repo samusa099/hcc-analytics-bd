@@ -1,0 +1,39 @@
+{
+  "title": "Bangladesh HR Compensation & Compliance Analytics",
+  "version": "1.1",
+  "created_on": "2026-07-24",
+  "country": "Bangladesh",
+  "language": [
+    "English",
+    "Bangla"
+  ],
+  "data_type": "Synthetic demo HR data",
+  "employee_records": 120,
+  "payroll_records": 697,
+  "attendance_records": 697,
+  "compliance_records": 1080,
+  "dashboards": [
+    "Compensation & Benefits Dashboard",
+    "HR Data Analysis & Compliance Dashboard"
+  ],
+  "platforms": [
+    "Microsoft Excel",
+    "Power BI",
+    "Looker Studio",
+    "Python",
+    "SQLite"
+  ],
+  "legal_baseline_date": "2026-07-24",
+  "not_legal_advice": true,
+  "source_domains": [
+    "bdlaws.minlaw.gov.bd",
+    "dife.gov.bd",
+    "nbr.gov.bd"
+  ],
+  "author": "Musa",
+  "updated_on": "2026-07-24",
+  "documentation": {
+    "quick_start": "README.md",
+    "detailed_dataset_usage_guide": "DATASET_USAGE_GUIDE.md"
+  }
+}

@@ -1,0 +1,121 @@
+﻿Employee_ID,Department,PF_Eligible,PF_Enrolled,Insurance_Eligible,Insurance_Enrolled,Gratuity_Eligible,Festival_Bonus_Eligible,Medical_Benefit,Transport_Benefit,Meal_Benefit,Benefit_Cost_Monthly,Enrollment_Compliance
+EMP0001,Quality Assurance,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6350,Exception
+EMP0002,Maintenance,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9070.0,Compliant
+EMP0003,Production,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,14230.0,Compliant
+EMP0004,Supply Chain,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,10670.0,Compliant
+EMP0005,Human Resources,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9630.0,Compliant
+EMP0006,Production,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,13550.0,Compliant
+EMP0007,Production,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5670.0,Compliant
+EMP0008,Sales & Marketing,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6030.0,Compliant
+EMP0009,Information Technology,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,8380.0,Exception
+EMP0010,Sales & Marketing,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,10950.0,Compliant
+EMP0011,Human Resources,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9310.0,Compliant
+EMP0012,Quality Assurance,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6350,Exception
+EMP0013,Maintenance,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8950.0,Compliant
+EMP0014,Maintenance,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5510.0,Compliant
+EMP0015,Maintenance,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5630.0,Compliant
+EMP0016,Finance & Accounts,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8670.0,Compliant
+EMP0017,Production,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6270.0,Compliant
+EMP0018,Administration,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5630.0,Compliant
+EMP0019,Maintenance,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6110.0,Compliant
+EMP0020,Sales & Marketing,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5100.0,Exception
+EMP0021,Quality Assurance,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6470.0,Compliant
+EMP0022,Sales & Marketing,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5950,Exception
+EMP0023,Quality Assurance,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6470.0,Compliant
+EMP0024,Supply Chain,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8350.0,Compliant
+EMP0025,Supply Chain,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5220.0,Exception
+EMP0026,Administration,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8590.0,Compliant
+EMP0027,Production,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5870.0,Compliant
+EMP0028,Production,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5510.0,Compliant
+EMP0029,Information Technology,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8390.0,Compliant
+EMP0030,Information Technology,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5470.0,Compliant
+EMP0031,Administration,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5390.0,Compliant
+EMP0032,Production,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4350,Exception
+EMP0033,Sales & Marketing,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9910.0,Compliant
+EMP0034,Production,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6390.0,Compliant
+EMP0035,Production,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,11030.0,Compliant
+EMP0036,Administration,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5190.0,Compliant
+EMP0037,Production,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5260.0,Exception
+EMP0038,Human Resources,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8470.0,Compliant
+EMP0039,Administration,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,12470.0,Compliant
+EMP0040,Sales & Marketing,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,10310.0,Compliant
+EMP0041,Human Resources,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8350.0,Compliant
+EMP0042,Information Technology,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,10750.0,Compliant
+EMP0043,Sales & Marketing,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5950,Exception
+EMP0044,Sales & Marketing,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5950,Exception
+EMP0045,Production,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6430.0,Compliant
+EMP0046,Production,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6350,Exception
+EMP0047,Quality Assurance,No,No,Yes,No,No,Yes,Yes,Yes,Yes,3700,Exception
+EMP0048,Finance & Accounts,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5550.0,Compliant
+EMP0049,Supply Chain,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5270.0,Compliant
+EMP0050,Production,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5950.0,Compliant
+EMP0051,Sales & Marketing,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8990.0,Compliant
+EMP0052,Information Technology,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5190.0,Compliant
+EMP0053,Production,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6350,Exception
+EMP0054,Administration,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8630.0,Compliant
+EMP0055,Human Resources,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,3950,Compliant
+EMP0056,Finance & Accounts,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8390.0,Compliant
+EMP0057,Administration,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9070.0,Compliant
+EMP0058,Supply Chain,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5910.0,Compliant
+EMP0059,Production,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5860.0,Exception
+EMP0060,Production,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,6350,Compliant
+EMP0061,Production,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,4350,Compliant
+EMP0062,Human Resources,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,10110.0,Compliant
+EMP0063,Supply Chain,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6110.0,Compliant
+EMP0064,Maintenance,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,10390.0,Compliant
+EMP0065,Maintenance,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4350,Exception
+EMP0066,Finance & Accounts,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5630.0,Compliant
+EMP0067,Administration,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8790.0,Compliant
+EMP0068,Information Technology,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,10030.0,Compliant
+EMP0069,Quality Assurance,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,13150.0,Compliant
+EMP0070,Production,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,5700,Exception
+EMP0071,Production,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6510.0,Compliant
+EMP0072,Information Technology,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6190.0,Compliant
+EMP0073,Quality Assurance,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,11670.0,Compliant
+EMP0074,Production,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6430.0,Compliant
+EMP0075,Information Technology,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5590.0,Compliant
+EMP0076,Production,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5830.0,Compliant
+EMP0077,Supply Chain,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5670.0,Compliant
+EMP0078,Finance & Accounts,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8710.0,Compliant
+EMP0079,Maintenance,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5020.0,Exception
+EMP0080,Supply Chain,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,16870.0,Compliant
+EMP0081,Finance & Accounts,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5060.0,Exception
+EMP0082,Sales & Marketing,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,13670.0,Compliant
+EMP0083,Information Technology,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,9660.0,Exception
+EMP0084,Human Resources,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9710.0,Compliant
+EMP0085,Supply Chain,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,11630.0,Compliant
+EMP0086,Quality Assurance,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6270.0,Compliant
+EMP0087,Sales & Marketing,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5550.0,Compliant
+EMP0088,Human Resources,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8550.0,Compliant
+EMP0089,Finance & Accounts,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5750.0,Compliant
+EMP0090,Production,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5060.0,Exception
+EMP0091,Quality Assurance,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,8820.0,Exception
+EMP0092,Quality Assurance,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9550.0,Compliant
+EMP0093,Finance & Accounts,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5150.0,Compliant
+EMP0094,Human Resources,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9150.0,Compliant
+EMP0095,Production,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4350,Exception
+EMP0096,Administration,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8870.0,Compliant
+EMP0097,Finance & Accounts,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,10270.0,Compliant
+EMP0098,Quality Assurance,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9830.0,Compliant
+EMP0099,Information Technology,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,17630.0,Compliant
+EMP0100,Information Technology,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8590.0,Compliant
+EMP0101,Administration,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9870.0,Compliant
+EMP0102,Finance & Accounts,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9750.0,Compliant
+EMP0103,Administration,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5190.0,Compliant
+EMP0104,Information Technology,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8270.0,Compliant
+EMP0105,Administration,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5590.0,Compliant
+EMP0106,Human Resources,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,15790.0,Compliant
+EMP0107,Supply Chain,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5190.0,Compliant
+EMP0108,Production,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8910.0,Compliant
+EMP0109,Quality Assurance,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,16270.0,Compliant
+EMP0110,Sales & Marketing,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,10790.0,Compliant
+EMP0111,Human Resources,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8790.0,Compliant
+EMP0112,Production,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5750.0,Compliant
+EMP0113,Maintenance,No,No,No,No,Yes,No,Yes,Yes,Yes,5700,Compliant
+EMP0114,Finance & Accounts,No,No,No,No,Yes,No,Yes,Yes,Yes,3300,Compliant
+EMP0115,Production,No,No,No,No,Yes,No,Yes,Yes,Yes,3700,Compliant
+EMP0116,Production,No,No,No,No,Yes,No,Yes,Yes,Yes,3700,Compliant
+EMP0117,Supply Chain,No,No,No,No,Yes,No,Yes,Yes,Yes,5300,Compliant
+EMP0118,Supply Chain,No,No,No,No,No,No,Yes,Yes,Yes,5300,Compliant
+EMP0119,Human Resources,No,No,No,No,Yes,No,Yes,Yes,Yes,5300,Compliant
+EMP0120,Production,No,No,No,No,Yes,No,Yes,Yes,Yes,3700,Compliant
