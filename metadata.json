@@ -1,7 +1,9 @@
 {
-  "title": "Bangladesh HR Compensation & Compliance Analytics",
-  "version": "1.1",
+  "title": "HCC Analytics BD",
+  "full_title": "HR Compensation & Compliance Analytics for Bangladesh",
+  "version": "1.2.0",
   "created_on": "2026-07-24",
+  "updated_on": "2026-07-24",
   "country": "Bangladesh",
   "language": [
     "English",
@@ -23,6 +25,19 @@
     "Python",
     "SQLite"
   ],
+  "security": {
+    "review_status": "closed-remediated",
+    "review_date": "2026-07-24",
+    "dependency_scanning": true,
+    "static_analysis": true,
+    "spreadsheet_formula_protection": true,
+    "workflow_default_permission": "contents: read"
+  },
+  "power_bi": {
+    "model_ready": true,
+    "native_pbix_generated": false,
+    "upload_guide": "powerbi/README.md"
+  },
   "legal_baseline_date": "2026-07-24",
   "not_legal_advice": true,
   "source_domains": [
@@ -31,9 +46,11 @@
     "nbr.gov.bd"
   ],
   "author": "Musa",
-  "updated_on": "2026-07-24",
   "documentation": {
     "quick_start": "README.md",
-    "detailed_dataset_usage_guide": "DATASET_USAGE_GUIDE.md"
+    "detailed_dataset_usage_guide": "DATASET_USAGE_GUIDE.md",
+    "release_notes": "RELEASE_NOTES.md",
+    "security_policy": "SECURITY.md",
+    "security_review": "docs/SECURITY_REVIEW_2026-07-24.md"
   }
 }
