@@ -1,4 +1,44 @@
-MIT License
+<h1 align="center">⚙️ Code Licence</h1>
+
+<p align="center">
+  <strong>MIT License</strong>
+</p>
+
+<p align="center">
+  <a href="https://opensource.org/license/mit"><img alt="MIT License" src="https://img.shields.io/badge/licence-MIT-2F81F7?style=flat&logo=opensourceinitiative&logoColor=white"></a>
+  <img alt="Commercial Use" src="https://img.shields.io/badge/commercial%20use-permitted-2E8B57?style=flat">
+  <img alt="Modification" src="https://img.shields.io/badge/modification-permitted-6F42C1?style=flat">
+  <img alt="Warranty" src="https://img.shields.io/badge/warranty-none-C92A2A?style=flat">
+</p>
+
+---
+
+## 🎯 Scope
+
+The MIT License applies to repository-created software and code, including:
+
+- Python scripts and notebooks;
+- SQL queries, schemas and analytical views;
+- project-generation and validation scripts;
+- reusable code examples;
+- code-based configuration and supporting utilities.
+
+Synthetic datasets, written documentation, guides and repository-created visual materials are licensed separately under the [`LICENSE`](LICENSE) file using **CC BY 4.0**.
+
+Third-party dependencies and embedded components remain subject to their own licences.
+
+---
+
+## ✅ Permission Summary
+
+The MIT License permits use, copying, modification, merging, publication, distribution, sublicensing and sale of the software, provided that the copyright and permission notice are retained in copies or substantial portions of the software.
+
+> [!IMPORTANT]
+> The summary above is provided for navigation only. The complete MIT License text below governs use of the code.
+
+---
+
+## 📜 MIT License
 
 Copyright (c) 2026 Musa
 
@@ -19,3 +59,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+<p align="center">
+  <strong>SPDX identifier: MIT</strong>
+</p>
