@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">HCC Analytics BD project cover</title>
+  <desc id="desc">Bangladesh HR compensation, payroll, attendance and compliance analytics project.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7FAFC"/>
+      <stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#006A4E"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="520" rx="30" fill="url(#bg)"/>
+  <circle cx="1100" cy="70" r="150" fill="#7C3AED" opacity="0.08"/>
+  <circle cx="90" cy="480" r="170" fill="#006A4E" opacity="0.08"/>
+  <rect x="64" y="58" width="8" height="404" rx="4" fill="url(#accent)"/>
+  <g transform="translate(104 76)">
+    <rect x="0" y="0" width="72" height="44" rx="9" fill="#006A4E"/>
+    <circle cx="36" cy="22" r="13" fill="#F42A41"/>
+    <text x="90" y="30" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#006A4E">BANGLADESH HR ANALYTICS</text>
+    <text x="0" y="112" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#111827">HCC Analytics BD</text>
+    <text x="0" y="158" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" fill="#475569">Compensation • Payroll • Attendance • Compliance</text>
+    <text x="0" y="201" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#64748B">A synthetic, portfolio-ready HR analytics environment for</text>
+    <text x="0" y="230" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#64748B">Excel, Power BI, Looker Studio, Python and SQLite.</text>
+    <g transform="translate(0 276)">
+      <rect width="165" height="52" rx="26" fill="#E7F6F1"/>
+      <text x="82.5" y="33" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#006A4E">100% Synthetic</text>
+      <rect x="180" width="160" height="52" rx="26" fill="#EDE9FE"/>
+      <text x="260" y="33" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#6D28D9">BI Ready</text>
+      <rect x="355" width="185" height="52" rx="26" fill="#E0F2FE"/>
+      <text x="447.5" y="33" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0369A1">Security Checked</text>
+    </g>
+  </g>
+  <g transform="translate(750 92)" filter="url(#shadow)">
+    <rect width="374" height="334" rx="26" fill="#FFFFFF"/>
+    <text x="30" y="46" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0F172A">HR DECISION DASHBOARD</text>
+    <text x="344" y="46" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#64748B">Demo view</text>
+    <g transform="translate(30 72)">
+      <rect width="145" height="72" rx="14" fill="#F0FDF4"/>
+      <text x="16" y="26" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#15803D">ACTIVE HEADCOUNT</text>
+      <text x="16" y="56" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#14532D">250</text>
+      <rect x="165" width="149" height="72" rx="14" fill="#F5F3FF"/>
+      <text x="181" y="26" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#6D28D9">COMPLIANCE SCORE</text>
+      <text x="181" y="56" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#4C1D95">94%</text>
+    </g>
+    <g transform="translate(30 170)">
+      <line x1="0" y1="110" x2="314" y2="110" stroke="#CBD5E1" stroke-width="1"/>
+      <line x1="0" y1="70" x2="314" y2="70" stroke="#E2E8F0" stroke-width="1"/>
+      <line x1="0" y1="30" x2="314" y2="30" stroke="#E2E8F0" stroke-width="1"/>
+      <path d="M0 98 C38 88,56 100,88 76 S144 70,176 52 S230 62,264 34 S298 28,314 14" fill="none" stroke="#7C3AED" stroke-width="5" stroke-linecap="round"/>
+      <path d="M0 105 C42 102,64 86,96 91 S150 88,184 70 S238 72,270 55 S300 49,314 44" fill="none" stroke="#006A4E" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="314" cy="14" r="6" fill="#7C3AED"/>
+      <circle cx="314" cy="44" r="6" fill="#006A4E"/>
+      <text x="0" y="137" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#64748B">Payroll trend</text>
+      <text x="314" y="137" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#64748B">Attendance trend</text>
+    </g>
+  </g>
+  <text x="104" y="480" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#64748B">Prepared by Musa • Learning, portfolio and decision-support template</text>
+</svg>
