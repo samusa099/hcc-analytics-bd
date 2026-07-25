@@ -21,15 +21,50 @@
   <a href="#-documentation-hub">Documentation</a>
 </p>
 
+<!-- STATUS & RELEASE -->
 <p align="center">
   <a href="https://github.com/samusa099/hcc-analytics-bd/actions/workflows/security.yml"><img alt="Security Checks" src="https://github.com/samusa099/hcc-analytics-bd/actions/workflows/security.yml/badge.svg"></a>
-  <a href="https://github.com/samusa099/hcc-analytics-bd/actions/workflows/build-project.yml"><img alt="Build Validation" src="https://github.com/samusa099/hcc-analytics-bd/actions/workflows/build-project.yml/badge.svg"></a>
-  <img alt="Release" src="https://img.shields.io/badge/release-v1.2.0-7C3AED">
-  <img alt="Synthetic Data" src="https://img.shields.io/badge/data-100%25%20synthetic-1E8E5A">
-  <img alt="Excel" src="https://img.shields.io/badge/Excel-dashboard-217346?logo=microsoftexcel&logoColor=white">
-  <img alt="Power BI" src="https://img.shields.io/badge/Power%20BI-ready-F2C811?logo=powerbi&logoColor=111827">
-  <img alt="Python" src="https://img.shields.io/badge/Python-analysis-3776AB?logo=python&logoColor=white">
-  <img alt="SQLite" src="https://img.shields.io/badge/SQLite-database-003B57?logo=sqlite&logoColor=white">
+  <a href="https://github.com/samusa099/hcc-analytics-bd/actions/workflows/build-project.yml"><img alt="Validate HCC Analytics BD Assets" src="https://github.com/samusa099/hcc-analytics-bd/actions/workflows/build-project.yml/badge.svg"></a>
+  <img alt="Release" src="https://img.shields.io/badge/release-v1.2.0-7C3AED?style=flat">
+  <img alt="Synthetic Data" src="https://img.shields.io/badge/data-100%25%20synthetic-1E8E5A?style=flat">
+  <img alt="Protected Main" src="https://img.shields.io/badge/main-protected-0A66C2?style=flat&logo=github">
+  <img alt="Dependabot" src="https://img.shields.io/badge/Dependabot-enabled-025E8C?style=flat&logo=dependabot">
+</p>
+
+<!-- ANALYTICS TOOLS -->
+<p align="center">
+  <img alt="Excel" src="https://img.shields.io/badge/Excel-dashboard-217346?style=flat&logo=microsoftexcel&logoColor=white">
+  <img alt="Power BI" src="https://img.shields.io/badge/Power%20BI-ready-F2C811?style=flat&logo=powerbi&logoColor=111827">
+  <img alt="Power Query" src="https://img.shields.io/badge/Power%20Query-transformation-00B294?style=flat&logo=microsoftpowerbi&logoColor=white">
+  <img alt="DAX" src="https://img.shields.io/badge/DAX-measures-F2C811?style=flat&logo=powerbi&logoColor=111827">
+  <img alt="Python" src="https://img.shields.io/badge/Python-analysis-3776AB?style=flat&logo=python&logoColor=white">
+  <img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-notebook-F37626?style=flat&logo=jupyter&logoColor=white">
+  <img alt="SQLite" src="https://img.shields.io/badge/SQLite-database-003B57?style=flat&logo=sqlite&logoColor=white">
+  <img alt="SQL" src="https://img.shields.io/badge/SQL-queries-336791?style=flat&logo=postgresql&logoColor=white">
+</p>
+
+<!-- PROJECT SCOPE -->
+<p align="center">
+  <img alt="HR Analytics" src="https://img.shields.io/badge/domain-HR%20Analytics-6F42C1?style=flat">
+  <img alt="Payroll Analytics" src="https://img.shields.io/badge/focus-Payroll%20Analytics-0B7285?style=flat">
+  <img alt="Compliance Analytics" src="https://img.shields.io/badge/focus-Compliance%20Analytics-C92A2A?style=flat">
+  <img alt="Bangladesh Context" src="https://img.shields.io/badge/context-Bangladesh-006A4E?style=flat">
+  <img alt="BI Ready CSV" src="https://img.shields.io/badge/CSV-BI--ready-2496ED?style=flat&logo=files&logoColor=white">
+  <img alt="Star Schema" src="https://img.shields.io/badge/model-star%20schema-FF8C00?style=flat">
+  <img alt="Portfolio Ready" src="https://img.shields.io/badge/project-portfolio%20ready-8E44AD?style=flat">
+  <img alt="Documentation Included" src="https://img.shields.io/badge/docs-included-2F81F7?style=flat&logo=readthedocs&logoColor=white">
+</p>
+
+<!-- REPOSITORY HEALTH -->
+<p align="center">
+  <img alt="Last Commit" src="https://img.shields.io/github/last-commit/samusa099/hcc-analytics-bd?style=flat&logo=github">
+  <img alt="Repository Size" src="https://img.shields.io/github/repo-size/samusa099/hcc-analytics-bd?style=flat&logo=github">
+  <img alt="Open Issues" src="https://img.shields.io/github/issues/samusa099/hcc-analytics-bd?style=flat&logo=github">
+  <img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/samusa099/hcc-analytics-bd?style=flat&logo=github">
+  <img alt="Stars" src="https://img.shields.io/github/stars/samusa099/hcc-analytics-bd?style=flat&logo=github">
+  <img alt="Forks" src="https://img.shields.io/github/forks/samusa099/hcc-analytics-bd?style=flat&logo=github">
+  <img alt="Documentation Licence" src="https://img.shields.io/badge/docs-CC%20BY%204.0-2E8B57?style=flat">
+  <img alt="Code Licence" src="https://img.shields.io/badge/code-MIT-blue?style=flat">
 </p>
 
 > [!IMPORTANT]
