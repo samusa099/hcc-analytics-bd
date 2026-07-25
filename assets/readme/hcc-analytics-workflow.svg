@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">HCC Analytics BD workflow</title>
+  <desc id="desc">A workflow from synthetic HR datasets through analysis tools to management decisions.</desc>
+  <defs>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#006A4E"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="300" rx="26" fill="#F8FAFC"/>
+  <text x="600" y="42" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#0F172A">FROM SYNTHETIC HR DATA TO DECISION-READY INSIGHT</text>
+  <rect x="130" y="63" width="940" height="5" rx="2.5" fill="url(#line)" opacity="0.65"/>
+
+  <g filter="url(#shadow)">
+    <rect x="58" y="98" width="220" height="142" rx="20" fill="#FFFFFF"/>
+    <circle cx="104" cy="136" r="23" fill="#E7F6F1"/>
+    <path d="M92 128 h24 v18 h-24 z M96 123 h16 v5 h-16 z" fill="none" stroke="#006A4E" stroke-width="3"/>
+    <text x="140" y="133" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#0F172A">SOURCE DATA</text>
+    <text x="82" y="177" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569">Employees • Payroll</text>
+    <text x="82" y="199" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569">Attendance • Benefits</text>
+    <text x="82" y="221" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569">Compliance • Law reference</text>
+  </g>
+
+  <line x1="284" y1="169" x2="344" y2="169" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="354" y="98" width="220" height="142" rx="20" fill="#FFFFFF"/>
+    <circle cx="400" cy="136" r="23" fill="#E0F2FE"/>
+    <path d="M387 146 l8-10 8 5 11-16" fill="none" stroke="#0369A1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="436" y="133" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#0F172A">PREPARE</text>
+    <text x="378" y="177" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569">Excel • Power Query</text>
+    <text x="378" y="199" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569">Python validation</text>
+    <text x="378" y="221" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569">SQLite modelling</text>
+  </g>
+
+  <line x1="580" y1="169" x2="640" y2="169" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="650" y="98" width="220" height="142" rx="20" fill="#FFFFFF"/>
+    <circle cx="696" cy="136" r="23" fill="#F3E8FF"/>
+    <rect x="684" y="129" width="6" height="13" rx="2" fill="#7C3AED"/>
+    <rect x="694" y="122" width="6" height="20" rx="2" fill="#7C3AED"/>
+    <rect x="704" y="115" width="6" height="27" rx="2" fill="#7C3AED"/>
+    <text x="732" y="133" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#0F172A">VISUALISE</text>
+    <text x="674" y="177" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569">Excel dashboards</text>
+    <text x="674" y="199" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569">Power BI • DAX</text>
+    <text x="674" y="221" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569">Looker Studio</text>
+  </g>
+
+  <line x1="876" y1="169" x2="936" y2="169" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="946" y="98" width="196" height="142" rx="20" fill="#FFFFFF"/>
+    <circle cx="992" cy="136" r="23" fill="#FEF3C7"/>
+    <path d="M983 136 l7 7 13-16" fill="none" stroke="#B45309" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1028" y="133" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#0F172A">DECIDE</text>
+    <text x="970" y="177" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569">Cost control</text>
+    <text x="970" y="199" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569">Risk follow-up</text>
+    <text x="970" y="221" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569">Management action</text>
+  </g>
+
+  <text x="600" y="277" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#64748B">Clean structure • Reproducible analysis • Responsible synthetic-data practice</text>
+</svg>
