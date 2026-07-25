@@ -1,25 +1,99 @@
-Creative Commons Attribution 4.0 International Public License
+<h1 align="center">📄 Dataset & Documentation Licence</h1>
 
-By exercising the Licensed Rights, you accept and agree to be bound by the
-terms and conditions of the Creative Commons Attribution 4.0 International
-Public License.
+<p align="center">
+  <strong>Creative Commons Attribution 4.0 International — CC BY 4.0</strong>
+</p>
 
-You are free to:
+<p align="center">
+  <a href="https://creativecommons.org/licenses/by/4.0/"><img alt="CC BY 4.0" src="https://img.shields.io/badge/licence-CC%20BY%204.0-2E8B57?style=flat&logo=creativecommons&logoColor=white"></a>
+  <img alt="Commercial Use" src="https://img.shields.io/badge/commercial%20use-permitted-2F81F7?style=flat">
+  <img alt="Adaptation" src="https://img.shields.io/badge/adaptation-permitted-6F42C1?style=flat">
+  <img alt="Attribution" src="https://img.shields.io/badge/attribution-required-CB7A00?style=flat">
+</p>
 
-1. Share — copy and redistribute the material in any medium or format.
-2. Adapt — remix, transform, and build upon the material for any purpose,
-   including commercially.
+---
 
-Under the following terms:
+## 🎯 Scope
 
-Attribution — You must give appropriate credit, provide a link to the license,
-and indicate if changes were made. You may do so in any reasonable manner,
-but not in any way that suggests the licensor endorses you or your use.
+Unless a file states otherwise, the following repository materials are licensed under the **Creative Commons Attribution 4.0 International Public License (CC BY 4.0)**:
 
-No additional restrictions — You may not apply legal terms or technological
-measures that legally restrict others from doing anything the license permits.
+- synthetic datasets and CSV tables;
+- data dictionaries and metadata;
+- written documentation and usage guides;
+- dashboard explanations and analytical examples;
+- repository-created diagrams, illustrations and README visual assets.
 
-Full licence text:
-https://creativecommons.org/licenses/by/4.0/legalcode
+Software source code, scripts, SQL and related code are licensed separately under the [`LICENSE-CODE`](LICENSE-CODE) file.
 
-Copyright (c) 2026 Musa.
+Third-party trademarks, logos, fonts, software, embedded assets or referenced materials remain subject to their respective owners' rights and licences.
+
+---
+
+## ✅ You Are Free To
+
+| Permission | Meaning |
+|---|---|
+| **Share** | Copy and redistribute the licensed material in any medium or format. |
+| **Adapt** | Remix, transform and build upon the licensed material. |
+| **Use commercially** | Use the licensed material for commercial or non-commercial purposes. |
+
+These permissions apply provided that the licence conditions are followed.
+
+---
+
+## 📌 Required Conditions
+
+### Attribution
+
+You must:
+
+- give appropriate credit;
+- provide a link to the CC BY 4.0 licence;
+- indicate whether changes were made;
+- retain relevant copyright, licence and disclaimer notices where reasonably practicable;
+- avoid suggesting that Musa or HCC Analytics BD endorses you or your use.
+
+### No additional restrictions
+
+You may not apply legal terms or technological measures that legally prevent others from doing anything the licence permits.
+
+---
+
+## ✍️ Suggested Attribution
+
+A practical attribution may be written as:
+
+> Based on **HCC Analytics BD** by **Musa**, licensed under **CC BY 4.0**. Changes were made.
+
+Where reasonably practicable, include:
+
+- the project or material title;
+- creator name: **Musa**;
+- a link to the original repository;
+- a link to `https://creativecommons.org/licenses/by/4.0/`;
+- a clear statement describing modifications.
+
+---
+
+## ⚠️ Notices and Limitations
+
+- The licensed material is provided on an **as-is** basis without warranties.
+- This licence does not automatically grant trademark, patent, privacy, publicity or other rights held by third parties.
+- Real employee or confidential organisational data is not included in the licensed project and must not be added without proper authority.
+- Synthetic HR, payroll and compliance examples are educational and must not be treated as legal, tax, payroll or regulatory advice.
+
+> [!IMPORTANT]
+> This file provides a project-specific scope notice and human-readable summary. The official CC BY 4.0 legal code governs the licence.
+
+---
+
+## 🔗 Official Licence
+
+- **Human-readable deed:** https://creativecommons.org/licenses/by/4.0/
+- **Legal code:** https://creativecommons.org/licenses/by/4.0/legalcode
+
+---
+
+<p align="center">
+  Copyright © 2026 Musa
+</p>
