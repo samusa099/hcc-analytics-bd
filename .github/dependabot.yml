@@ -1,4 +1,5 @@
 version: 2
+
 updates:
   - package-ecosystem: pip
     directory: /python_sqlite
@@ -25,11 +26,20 @@ updates:
       day: monday
       time: "04:30"
       timezone: Asia/Dhaka
-    open-pull-requests-limit: 3
+    open-pull-requests-limit: 5
     groups:
+      codeql-suite:
+        patterns:
+          - "github/codeql-action/*"
+        update-types:
+          - major
+          - minor
+          - patch
       actions-patch-minor:
         patterns:
           - "*"
+        exclude-patterns:
+          - "github/codeql-action/*"
         update-types:
           - patch
           - minor
