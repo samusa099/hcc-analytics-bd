@@ -1,0 +1,200 @@
+name: Issue First Automation
+
+on:
+  workflow_run:
+    types: [completed]
+  pull_request_target:
+    types: [opened, reopened, ready_for_review]
+
+# Deny write access by default. Each job receives only the permissions it needs.
+permissions:
+  contents: read
+
+concurrency:
+  group: issue-first-${{ github.event_name }}-${{ github.event.pull_request.number || github.event.workflow_run.id }}
+  cancel-in-progress: false
+
+jobs:
+  bot-pr-to-issue:
+    if: github.event_name == 'pull_request_target'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+    steps:
+      # This privileged metadata workflow never checks out or executes pull-request code.
+      - name: Convert bot pull request to a tracked issue
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const pr = context.payload.pull_request;
+            const senderType = context.payload.sender?.type;
+            const isVerifiedBotEvent = senderType === 'Bot' && context.actor.endsWith('[bot]');
+            const exempt = (pr.labels || []).some(label => label.name === 'allow-bot-pr');
+
+            if (!isVerifiedBotEvent || exempt) return;
+
+            const labels = [
+              ['bot:proposal', '5319e7', 'Bot-generated change converted to an issue'],
+              ['status:triage', 'fbca04', 'Awaiting maintainer triage'],
+              ['issue-first', '0e8a16', 'Tracked through the issue-first workflow'],
+              ['approved-for-fix', '1d76db', 'Approved for implementation'],
+              ['allow-bot-pr', '0969da', 'Permit this bot pull request to remain open']
+            ];
+
+            for (const [name, color, description] of labels) {
+              try {
+                await github.rest.issues.getLabel({ owner, repo, name });
+              } catch (error) {
+                if (error.status !== 404) throw error;
+                await github.rest.issues.createLabel({ owner, repo, name, color, description });
+              }
+            }
+
+            const marker = `<!-- bot-pr:${pr.number} -->`;
+            const { data: openIssues } = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: 'open',
+              labels: 'bot:proposal',
+              per_page: 100
+            });
+
+            let issue = openIssues.find(item =>
+              !item.pull_request && (item.body || '').includes(marker)
+            );
+
+            if (!issue) {
+              const safeTitle = String(pr.title || 'Untitled bot proposal')
+                .replace(/[\u0000-\u001F\u007F]/g, ' ')
+                .trim()
+                .slice(0, 180);
+              const safeBody = String(pr.body || 'No pull-request description was provided.')
+                .replace(/\u0000/g, '')
+                .slice(0, 8000);
+
+              issue = (await github.rest.issues.create({
+                owner,
+                repo,
+                title: `[Bot Proposal] ${safeTitle}`,
+                labels: ['bot:proposal', 'status:triage', 'issue-first'],
+                body: `${marker}\n## Source pull request\n\n- Pull request: ${pr.html_url}\n- Bot: \`${context.actor}\`\n- Head branch: \`${pr.head.ref}\`\n- Head commit: \`${pr.head.sha}\`\n\n<details>\n<summary>Original proposal</summary>\n\n${safeBody}\n\n</details>\n\n## Resolution checklist\n\n- [ ] Validate the underlying problem or update.\n- [ ] Define acceptance criteria and risk.\n- [ ] Add the \`approved-for-fix\` label.\n- [ ] Implement the smallest safe change.\n- [ ] Verify required checks and document evidence.`
+              })).data;
+            }
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: pr.number,
+              body: `Converted to issue #${issue.number} under the Issue First policy. The original proposal and commit SHA are preserved there. Add \`allow-bot-pr\` before reopening only when the bot PR itself must remain active.`
+            });
+
+            await github.rest.pulls.update({
+              owner,
+              repo,
+              pull_number: pr.number,
+              state: 'closed'
+            });
+
+  ci-failure-to-issue:
+    if: github.event_name == 'workflow_run'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - name: Track failed workflow runs and close only after verification
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const run = context.payload.workflow_run;
+
+            if (!run || run.name === 'Issue First Automation') return;
+
+            const labels = [
+              ['bot:ci-failure', 'b60205', 'Automated CI failure'],
+              ['status:triage', 'fbca04', 'Awaiting maintainer triage'],
+              ['issue-first', '0e8a16', 'Tracked through the issue-first workflow'],
+              ['auto-resolved', '0e8a16', 'Closed after a successful verification run']
+            ];
+
+            for (const [name, color, description] of labels) {
+              try {
+                await github.rest.issues.getLabel({ owner, repo, name });
+              } catch (error) {
+                if (error.status !== 404) throw error;
+                await github.rest.issues.createLabel({ owner, repo, name, color, description });
+              }
+            }
+
+            const workflowKey = run.workflow_id || run.name;
+            const branchKey = run.head_branch || run.head_sha || 'unknown';
+            const marker = `<!-- workflow-key:${workflowKey}:${branchKey} -->`;
+            const { data: openIssues } = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: 'open',
+              labels: 'bot:ci-failure',
+              per_page: 100
+            });
+            const issue = openIssues.find(item =>
+              !item.pull_request && (item.body || '').includes(marker)
+            );
+
+            if (run.conclusion === 'success') {
+              if (!issue) return;
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: issue.number,
+                body: `✅ Verified by successful workflow run: ${run.html_url}\n\nCommit: \`${run.head_sha}\``
+              });
+              const existingLabels = (issue.labels || []).map(label =>
+                typeof label === 'string' ? label : label.name
+              );
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: issue.number,
+                state: 'closed',
+                state_reason: 'completed',
+                labels: [...new Set([...existingLabels, 'auto-resolved'])]
+              });
+              return;
+            }
+
+            const actionableFailures = new Set([
+              'failure',
+              'timed_out',
+              'action_required',
+              'startup_failure'
+            ]);
+            if (!actionableFailures.has(run.conclusion)) return;
+
+            const safeWorkflowName = String(run.name || 'Unnamed workflow')
+              .replace(/[\u0000-\u001F\u007F]/g, ' ')
+              .trim()
+              .slice(0, 160);
+            const body = `${marker}\nWorkflow **${safeWorkflowName}** failed on \`${branchKey}\`.\n\n- Conclusion: \`${run.conclusion}\`\n- Event: \`${run.event}\`\n- Run: ${run.html_url}\n- Commit: \`${run.head_sha}\`\n\n## Resolution checklist\n\n- [ ] Identify the root cause from the failed job logs.\n- [ ] Record the proposed fix and regression risk.\n- [ ] Apply the smallest safe change.\n- [ ] Re-run the workflow.\n- [ ] Close only after a successful verification run.`;
+
+            if (issue) {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: issue.number,
+                body: `Failure occurred again.\n\n- Conclusion: \`${run.conclusion}\`\n- Run: ${run.html_url}\n- Commit: \`${run.head_sha}\``
+              });
+            } else {
+              await github.rest.issues.create({
+                owner,
+                repo,
+                title: `[CI Failure] ${safeWorkflowName} on ${branchKey}`.slice(0, 240),
+                labels: ['bot:ci-failure', 'status:triage', 'issue-first'],
+                body
+              });
+            }
