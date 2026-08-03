@@ -1,0 +1,16 @@
+name: "HCC Analytics BD CodeQL Configuration"
+
+queries:
+  - uses: security-extended
+
+paths:
+  - python_sqlite
+
+paths-ignore:
+  - "**/*.ipynb"
+  - "**/.ipynb_checkpoints/**"
+  - "python_sqlite/cleaned/**"
+  - "**/*.csv"
+  - "**/*.xlsx"
+  - "**/*.xls"
+  - "**/*.pbix"
