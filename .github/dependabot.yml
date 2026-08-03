@@ -28,14 +28,22 @@ updates:
       timezone: Asia/Dhaka
     open-pull-requests-limit: 5
     groups:
-      codeql-suite:
+      codeql-version-suite:
+        applies-to: version-updates
         patterns:
           - "github/codeql-action/*"
         update-types:
           - major
           - minor
           - patch
-      actions-patch-minor:
+
+      codeql-security-suite:
+        applies-to: security-updates
+        patterns:
+          - "github/codeql-action/*"
+
+      other-actions-patch-minor:
+        applies-to: version-updates
         patterns:
           - "*"
         exclude-patterns:
@@ -43,5 +51,6 @@ updates:
         update-types:
           - patch
           - minor
+
     commit-message:
       prefix: actions
