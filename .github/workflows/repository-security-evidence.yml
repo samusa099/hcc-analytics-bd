@@ -1,0 +1,104 @@
+name: Repository Security Evidence
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/repository-security-evidence.yml"
+      - ".github/workflows/publish-v1.2.0.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: read
+
+jobs:
+  audit-security-settings:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Inspect repository-level security controls
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import os
+          import urllib.error
+          import urllib.request
+
+          repo = os.environ["GITHUB_REPOSITORY"]
+          token = os.environ["GH_TOKEN"]
+          headers = {
+              "Accept": "application/vnd.github+json",
+              "Authorization": f"Bearer {token}",
+              "X-GitHub-Api-Version": "2026-03-10",
+              "User-Agent": "hcc-repository-security-evidence",
+          }
+
+          def request(path):
+              url = f"https://api.github.com/repos/{repo}{path}"
+              req = urllib.request.Request(url, headers=headers)
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as response:
+                      body = response.read()
+                      return response.status, json.loads(body) if body else None
+              except urllib.error.HTTPError as exc:
+                  body = exc.read().decode("utf-8", errors="replace")
+                  try:
+                      payload = json.loads(body) if body else None
+                  except json.JSONDecodeError:
+                      payload = {"message": body[:500]}
+                  return exc.code, payload
+
+          repo_status, repository = request("")
+          security = (repository or {}).get("security_and_analysis") or {}
+          print("REPOSITORY_STATUS=", repo_status)
+          print("SECURITY_AND_ANALYSIS=", json.dumps(security, sort_keys=True))
+
+          pvr_status, pvr = request("/private-vulnerability-reporting")
+          print("PRIVATE_VULNERABILITY_REPORTING_STATUS=", pvr_status)
+          print("PRIVATE_VULNERABILITY_REPORTING=", json.dumps(pvr, sort_keys=True))
+
+          scan_status, scan = request("/secret-scanning/scan-history")
+          print("SECRET_SCANNING_HISTORY_STATUS=", scan_status)
+          if isinstance(scan, dict):
+              compact_scan = {
+                  key: scan.get(key)
+                  for key in ("incremental_scans", "pattern_update_scans", "backfill_scans", "custom_pattern_backfill_scans")
+                  if key in scan
+              }
+          else:
+              compact_scan = scan
+          print("SECRET_SCANNING_HISTORY=", json.dumps(compact_scan, sort_keys=True))
+
+          release_status, release = request("/releases/tags/v1.2.0")
+          compact_release = None
+          if isinstance(release, dict):
+              compact_release = {
+                  key: release.get(key)
+                  for key in ("html_url", "tag_name", "name", "draft", "prerelease", "target_commitish")
+              }
+          print("RELEASE_V1_2_0_STATUS=", release_status)
+          print("RELEASE_V1_2_0=", json.dumps(compact_release, sort_keys=True))
+
+          ruleset_status, summaries = request("/rulesets?includes_parents=true")
+          print("RULESET_LIST_STATUS=", ruleset_status)
+          evidence = []
+          for summary in summaries if isinstance(summaries, list) else []:
+              if summary.get("enforcement") != "active" or summary.get("target") != "branch":
+                  continue
+              detail_status, detail = request(
+                  f"/rulesets/{summary['id']}?includes_parents=true"
+              )
+              evidence.append({
+                  "id": summary.get("id"),
+                  "name": summary.get("name"),
+                  "detail_status": detail_status,
+                  "enforcement": (detail or {}).get("enforcement"),
+                  "conditions": (detail or {}).get("conditions"),
+                  "rules": (detail or {}).get("rules"),
+              })
+          print("ACTIVE_BRANCH_RULESETS=", json.dumps(evidence, sort_keys=True))
+          PY

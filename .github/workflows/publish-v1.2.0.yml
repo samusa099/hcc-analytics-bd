@@ -1,6 +1,7 @@
 name: Publish HCC Analytics BD v1.2.0
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
@@ -19,6 +20,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          set -euo pipefail
+
           if gh release view v1.2.0 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
             echo "Release v1.2.0 already exists."
             exit 0
@@ -57,3 +60,7 @@ jobs:
             --title "HCC Analytics BD v1.2.0" \
             --notes-file release-notes.md \
             --latest
+
+          gh release view v1.2.0 \
+            --repo "$GITHUB_REPOSITORY" \
+            --json tagName,name,isDraft,isPrerelease,url,targetCommitish
